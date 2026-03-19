@@ -1,8 +1,13 @@
 def is_year_leap(year):
-    #
-    # Write your code here.
-    #
-    print("Is it a leap year?")
+  if yr%400==0:
+      return True
+  elif yr%100==0:
+      return False
+  elif yr%4==0:
+      return True
+  else:
+      return False
+
 
 test_data = [1900, 2000, 2016, 1987]
 test_results = [False, True, True, False]
