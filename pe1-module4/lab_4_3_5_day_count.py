@@ -8,7 +8,7 @@ def days_in_month(year, month):
     days = [31, 28, 31, 30, 31, 30,
             31, 31, 30, 31, 30, 31]
 
-    # handle February
+    # handle February as its a leap year
     if month == 2 and lab_4_3_4_leap_year.is_year_leap(year):
         return 29
 
