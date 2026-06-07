@@ -1,0 +1,47 @@
+let contacts = [{
+    name: "Maxwell Wright",
+    phone: "(0191) 719 6495",
+    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+}, {
+    name: "Raja Villarreal",
+    phone: "0866 398 2895",
+    email: "posuere.vulputate@sed.com"
+}, {
+    name: "Helen Richards",
+    phone: "0800 1111",
+    email: "libero@convallis.edu"
+}];
+
+let action = prompt("What would you like to do? (Enter: first, last, or new)");
+
+switch (action) {
+    case "first":
+        console.log(`First contact: ${contacts[0].name} / ${contacts[0].phone} / ${contacts[0].email}`);
+        break;
+
+    case "last":
+        let lastIndex = contacts.length - 1;
+        console.log(`Last contact: ${contacts[lastIndex].name} / ${contacts[lastIndex].phone} / ${contacts[lastIndex].email}`);
+        break;
+
+    case "new":
+        let newName = prompt("Enter contact name:");
+        let newPhone = prompt("Enter contact phone:");
+        let newEmail = prompt("Enter contact email:");
+
+        if (newName && newPhone && newEmail) {
+            contacts.push({
+                name: newName,
+                phone: newPhone,
+                email: newEmail
+            });
+            console.log("Success: Contact added.");
+        } else {
+            console.log("Error: Missing data. Contact not added.");
+        }
+        break;
+
+    default:
+        console.log("Invalid selection.");
+        break;
+}
